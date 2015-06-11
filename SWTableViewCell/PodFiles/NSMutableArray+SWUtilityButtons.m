@@ -29,9 +29,10 @@
     [self addObject:button];
 }
 
-- (void)sw_addUtilityButtonWithColor:(UIColor *)color icon:(UIImage *)icon
+- (void)sw_addUtilityButtonWithColor:(UIColor *)color icon:(UIImage *)icon enabled:(BOOL)enabled
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.enabled = enabled;
     button.backgroundColor = color;
     [button setImage:icon forState:UIControlStateNormal];
     [self addObject:button];
